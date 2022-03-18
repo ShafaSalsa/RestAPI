@@ -2,21 +2,28 @@
 @extends('layouts.app')
 
 <div class="text-center">
-    <h3> TABLE CONSUME REST API</h3>
+    <h3> DATA USER</h3>
 </div>
 
 
 <div class="text-end">
-    <small>Shafa Salsabila</small>
 </div>
-
-    <table class=" table table-bordered" style="width:100%; height:10px">
+<div class="pull-right">
+                <a class="btn btn-success" href="{{route('users.create')}}"> Create</a>
+            </div>
+            <br>
+            
+    <table class=" table table-bordered" style="width:90%; height:15px; border-color: grey; margin-left:auto;margin-right:auto; border:1;" >
+    <th><input type="checkbox" id="checkall" /></th>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Action</th>
     @php
         $number = 1;
     @endphp
 		
     @forelse($users['data'] as $user)
-    <tr>
+    <tr style="background-color:#dbffe5; color:black;">
         <td>{{ $number++ }}</td>
         <td>{{ $user['firstName'] }}</td>
         <td>{{ $user['lastName'] }}</td>

@@ -4,6 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    
+        tr{
+            background-color: #74c365;
+            color: #1b1811;
+        }
+    </style>
+
 
         <title>{{ config('app.name', 'Consume Rest API') }}</title>
 
